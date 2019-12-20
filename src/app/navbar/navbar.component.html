@@ -1,0 +1,64 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!-- <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button> -->
+      <h1>@Meet-People</h1>
+      <span class="menu-spacer"></span>
+      <div class="divmargin">
+        <a mat-button [routerLink]="'/create-account'"> Favourite </a>
+        <a mat-button [routerLink]="'/contacts'"> About </a>
+        <a mat-button [routerLink]="'/create-contact'"> All Profiles </a>
+        <a mat-button [routerLink]="'/create-activity'"> Settings </a>
+        <a mat-button [routerLink]="'/activities'">  My Profile </a>
+       
+        
+    
+      <div ngbDropdown class="d-inline-block"><span id="dropdownBasic1" ngbDropdownToggle *ngIf="userDetails!=undefined && userDetails.image!=undefined"><img
+          [src]="userDetails.image"
+          class="rounded-circle z-depth-0"
+          alt="avatar image"
+          height="50" width="50"
+        /> </span>
+        <span id="dropdownBasic1" ngbDropdownToggle *ngIf="!userDetails.image">
+          <ngx-avatar  [name]="userDetails.firstName" borderCorner="20"
+          bgColor="#58D3F7"  size="50" 
+          textSizeRatio="2.2" [round]="true">
+        </ngx-avatar> 
+        </span>
+
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>My Account</button>
+          <button ngbDropdownItem>Settings</button>
+          <button ngbDropdownItem (click)="doLogOut()">Log Out</button>
+        </div>
+</div>
+      </div>
+    </mat-toolbar-row>
+    <!-- <mat-toolbar-row>
+        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+      </mat-toolbar-row> -->
+  </mat-toolbar>
+
+
+  <!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]="'/accounts'"> My Account </a>
+        <a mat-list-item [routerLink]="'/create-account'">Favourite</a>
+        <a mat-list-item [routerLink]="'/contacts'"> About </a>
+        <a mat-list-item [routerLink]="'/create-contact'"> All Profiles </a>
+        <a mat-list-item [routerLink]="'/activities'"> My Profile </a>
+        <a mat-list-item [routerLink]="'/create-activity'"> Settings</a>
+        <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+  
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->

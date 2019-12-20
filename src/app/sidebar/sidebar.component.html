@@ -1,0 +1,28 @@
+<div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" #sidebar>
+            <div class="sidebar-header">
+                <h4 class="text-danger"><strong>{{logedInUser.firstname}} {{logedInUser.lastname}}</strong></h4>
+            </div>
+    
+            <ul class="list-unstyled">
+                <h4 class="ml-2" routerLink="#">My Account</h4>
+                <li>
+                    <a routerLink="#">Favourite</a>
+                </li>
+                <li >
+                    <a routerLink="#">About</a>
+                </li>
+                <li  routerLinkActive="active">
+                    <a routerLink="/allProfiles">All Profiles</a>
+                </li>
+                <li  >
+                    <a routerLink="#">My Profile</a>
+                </li>
+                <li >
+                    <a routerLink="#">Settings</a>
+                </li>
+            </ul>
+        </nav>
+    
+    </div>

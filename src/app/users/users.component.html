@@ -1,0 +1,37 @@
+<html>
+    <head>
+            <link
+href=[https://fonts.googleapis.com/icon?family=Material+Icons](https://fonts.googleapis.com/icon?family=Material+Icons)
+rel="stylesheet">
+    </head>
+        <div class="container col-12 scrollCSS">
+    <div class="row borderDiv p-2" *ngFor="let user of users">
+        <div *ngIf="user.image"> 
+            <img [src]="user.image" alt="thumbnail" class="img-thumbnail"  style="width: 155px; height:150px">
+        </div>
+    <div *ngIf="!user.image" >
+        <ngx-avatar  [name]="user.firstName" borderCorner="20"
+        bgColor="#58D3F7"  size="150" 
+        textSizeRatio="2.2" [round]="false">
+      </ngx-avatar> 
+     <span class="text-white">{{user.fisrtName}}</span>
+    </div>
+            <ul>
+                <li>
+                    <p><strong>{{user.firstName}} {{user.lastName}}</strong></p>
+                    <mat-icon *ngIf="!user.favourite" (click)="makeFav(user)">favorite_border</mat-icon>
+                    <mat-icon *ngIf="user.favourite" class="red-icon" (click)="makeFav(user)">favorite</mat-icon>
+                </li>
+                <li>
+                    <span><strong>Email:</strong></span><a href=""> {{user.email}}</a>
+                </li>
+                <li>
+                    <span><strong>Age:</strong></span><span>{{user.age}}</span>
+                    <span class="ml-2"><strong>Gender:</strong></span><span>{{user.gender}}</span>
+                </li>
+
+            </ul>
+    
+    </div>
+</div>
+</html>

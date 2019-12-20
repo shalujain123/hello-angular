@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body{
+    padding: 20px;
+}
+.form-control.ng-touched.ng-invalid{
+    border:2px solid red;
+}
+.colorOfText{
+    color:#eee1f3 !important;
+  }
+  .loginBack{
+    background-color: #3f51b5 !important;
+  }
+
+  a:hover {
+    text-decoration: none !important;
+    color: #0000EE !important;
+  }
+
+  .mat-select-value {
+    color:#eee1f3 !important;
+}
